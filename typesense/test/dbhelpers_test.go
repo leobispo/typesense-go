@@ -10,8 +10,8 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
-	"github.com/typesense/typesense-go/typesense/api"
-	"github.com/typesense/typesense-go/typesense/api/pointer"
+	"github.com/leobispo/typesense-go/typesense/api"
+	"github.com/leobispo/typesense-go/typesense/api/pointer"
 )
 
 func newUUIDName(namePrefix string) string {

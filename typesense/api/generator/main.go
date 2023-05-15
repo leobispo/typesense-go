@@ -39,7 +39,7 @@ func sortedSlice(params map[string]interface{}) []MapKV {
 }
 
 // This script makes the changes needed for oapi-codegen to generate client_gen.go and types_gen.go from
-// https://github.com/typesense/typesense-api-spec/blob/master/openapi.yml
+// https://github.com/leobispo/typesense-api-spec/blob/master/openapi.yml
 
 func main() {
 	m := make(yml)

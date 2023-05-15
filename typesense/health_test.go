@@ -8,8 +8,8 @@ import (
 
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
-	"github.com/typesense/typesense-go/typesense/api"
-	"github.com/typesense/typesense-go/typesense/mocks"
+	"github.com/leobispo/typesense-go/typesense/api"
+	"github.com/leobispo/typesense-go/typesense/mocks"
 )
 
 func TestHealthStatus(t *testing.T) {
