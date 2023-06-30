@@ -9,10 +9,10 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
-	"github.com/stretchr/testify/assert"
 	"github.com/leobispo/typesense-go/typesense/api"
 	"github.com/leobispo/typesense-go/typesense/api/pointer"
 	"github.com/leobispo/typesense-go/typesense/mocks"
+	"github.com/stretchr/testify/assert"
 )
 
 func createNewDocument(docIDs ...string) interface{} {
@@ -297,7 +297,7 @@ func TestDocumentsExport(t *testing.T) {
 		Times(1)
 
 	client := NewClient(WithAPIClient(mockAPIClient))
-	result, err := client.Collection("companies").Documents().Export()
+	result, err := client.Collection("companies").Documents().Export(nil)
 	assert.Nil(t, err)
 
 	resultBytes, err := ioutil.ReadAll(result)
@@ -316,7 +316,7 @@ func TestDocumentsExportOnApiClientErrorReturnsError(t *testing.T) {
 		Times(1)
 
 	client := NewClient(WithAPIClient(mockAPIClient))
-	_, err := client.Collection("companies").Documents().Export()
+	_, err := client.Collection("companies").Documents().Export(nil)
 	assert.NotNil(t, err)
 }
 
@@ -334,6 +334,6 @@ func TestDocumentsExportOnHttpStatusErrorCodeReturnsError(t *testing.T) {
 		Times(1)
 
 	client := NewClient(WithAPIClient(mockAPIClient))
-	_, err := client.Collection("companies").Documents().Export()
+	_, err := client.Collection("companies").Documents().Export(nil)
 	assert.NotNil(t, err)
 }
